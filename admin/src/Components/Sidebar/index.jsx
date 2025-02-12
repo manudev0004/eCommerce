@@ -20,7 +20,7 @@ const Sidebar = () => {
     }
   };
   return (
-    <div className="sidebar fixed top-0 left-0 bg-amber-50 w-[17%] h-full border-r border-[rgba(0,0,0,0.2)] py-2 px-2">
+    <div className="sidebar fixed top-0 left-0 bg-[rgba(245,74,74,0.9)] w-[17%] h-full border-r border-[rgba(0,0,0,0.2)] py-2 px-2">
       <div className="py-2 w-full">
         <Link to="/">
           <img
@@ -53,7 +53,11 @@ const Sidebar = () => {
             <HiArchive className="text-[18px]" />
             <span>Products</span>
             <span className="ml-auto w-[30px] h-[30px] flex items-center justify-center">
-              <FaAngleDown className={`transition-all  ${submenuIndex ===1 ? 'rotate-180' : ''}`}/>
+              <FaAngleDown
+                className={`transition-all  ${
+                  submenuIndex === 1 ? "rotate-180" : ""
+                }`}
+              />
             </span>
           </Button>
         </li>
@@ -62,14 +66,14 @@ const Sidebar = () => {
           <ul className="w-full" style={{ listStyle: "!disc" }}>
             <li className="w-full">
               <Button className="!w-full !capitalize !justify-start !text-[rgba(0,0,0,0.7)] !text-[14px] !pl-8 flex gap-3">
-              <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
+                <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
                 List 1
               </Button>
             </li>
 
             <li className="w-full">
               <Button className="!w-full !capitalize !justify-start !text-[rgba(0,0,0,0.7)] !text-[14px] !pl-8 flex gap-3">
-              <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
+                <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
                 List 2
               </Button>
             </li>
@@ -77,11 +81,18 @@ const Sidebar = () => {
         </Collapse>
 
         <li>
-          <Button className="w-full !capitalize !justify-start flex gap-1 !text-[rgba(0,0,0,0.8)] !text-[16px] !font-bold" onClick={() => isOpenSubMenu(2)}>
+          <Button
+            className="w-full !capitalize !justify-start flex gap-1 !text-[rgba(0,0,0,0.8)] !text-[16px] !font-bold"
+            onClick={() => isOpenSubMenu(2)}
+          >
             <MdCategory className="text-[18px]" />
             <span>Category</span>
             <span className="ml-auto w-[30px] h-[30px] flex items-center justify-center">
-              <FaAngleDown className={`transition-all  ${submenuIndex ===2 ? 'rotate-180' : ''}`}/>
+              <FaAngleDown
+                className={`transition-all  ${
+                  submenuIndex === 2 ? "rotate-180" : ""
+                }`}
+              />
             </span>
           </Button>
         </li>
@@ -90,14 +101,14 @@ const Sidebar = () => {
           <ul className="w-full" style={{ listStyle: "!disc" }}>
             <li className="w-full">
               <Button className="!w-full !capitalize !justify-start !text-[rgba(0,0,0,0.7)] !text-[14px] !pl-8 flex gap-3">
-              <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
+                <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
                 Product List
               </Button>
             </li>
 
             <li className="w-full">
               <Button className="!w-full !capitalize !justify-start !text-[rgba(0,0,0,0.7)] !text-[14px] !pl-8 flex gap-3">
-              <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
+                <span className="block w-[5px] h-[5px] rounded-full bg-[rgba(0,0,0,0.2)] "></span>{" "}
                 Add
               </Button>
             </li>

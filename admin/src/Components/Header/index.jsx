@@ -8,6 +8,7 @@ import { FaBell } from "react-icons/fa";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import Divider from "@mui/material/Divider";
+import { FaRegUser } from "react-icons/fa";
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   "& .MuiBadge-badge": {
@@ -28,7 +29,7 @@ const Header = () => {
     setAnchorMyAcc(null);
   };
   return (
-    <header className="w-full h-[auto] py-2 pl-68 pr-8 bg-amber-100 shadow-md flex items-center justify-between">
+    <header className="w-full h-[auto] py-2 pl-68 pr-8 bg-[rgba(46,95,151,0.7)] shadow-md flex items-center justify-between">
       <div className="part1">
         <Button className="!w-[40px] !h-[40px] !rounded-full !min-w-[40px] !text-[rgba(0,0,0,0.8)]">
           <BiMenuAltLeft className="text-[20px] text-[rgba(0,0,0,0.8)]" />
@@ -46,11 +47,11 @@ const Header = () => {
           <div
             className="rounded-full w-[35px] h-[35px] overflow-hidden cursor-pointer "
             onClick={handleClickMyAcc}
-          >
-            <img
+          ><FaRegUser className="w-full h-[80%] object-cover" />
+            {/* <img
               src="https://knowledge.hubspot.com/hs-fs/hubfs/darrielle.jpeg?width=48&height=48&name=darrielle.jpeg"
               className="w-full h-full object-cover"
-            ></img>
+            ></img> */}
           </div>
         </div>
         <Menu

@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Dashboard from "./Pages/Dashboard";
 import Header from "./Components/Header";
 import Sidebar from "./Components/Sidebar";
+import AuthenticationForm from "./Components/AuthenticationForm";
 
 function App() {
   const router = createBrowserRouter([
@@ -17,7 +18,21 @@ function App() {
               <div className="sidebarWrapper w-[17%]">
                 <Sidebar />
               </div>
+              <div className="contentRight w-[83%] py-4 pl-4">
+                <Dashboard />
+              </div>
             </div>
+          </section>
+        </>
+      ),
+    },
+    {
+      path: "/authenticate",
+      exact: true,
+      element: (
+        <>
+          <section className="main">
+            <AuthenticationForm />
           </section>
         </>
       ),
